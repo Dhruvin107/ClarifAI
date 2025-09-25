@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClarifAI - Your AI Assistant</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar with Glassmorphism -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><span class="clarifai-text">ClarifAI</span></h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-up">
+                    Welcome to <span class="highlight">ClarifAI</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-up">
+                    <span id="typewriter"></span>
+                </p>
+            </div>
+            
+            <!-- AI Chat Interface (moved out of hero-content) -->
+            <div class="chat-container animate-fade-up">
+                <div class="chat-input-group">
+                    <input 
+                        type="text" 
+                        id="questionInput" 
+                        placeholder="Ask me anything about ClarifAI..."
+                        class="chat-input"
+                    >
+                    <button id="askButton" class="ask-button">
+                        <i class="fas fa-paper-plane"></i>
+                        Ask
+                    </button>
+                </div>
+                <div id="aiResponse" class="ai-response"></div>
+            </div>
+
+            <!-- Download APK Button (moved out of hero-content) -->
+            <div class="download-section animate-fade-up">
+                <button class="download-btn">
+                    <i class="fas fa-download"></i>
+                    Download APK
+                </button>
+            </div>
+        </div>
+        
+        <!-- Background Animation Elements -->
+        <div class="floating-elements">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why ClarifAI?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-card glassmorphism">
+                    <div class="about-text">
+                        <h3>Empowering Student Learning</h3>
+                        <p>
+                            ClarifAI was created with a simple yet powerful mission – to make learning easier, faster, and more reliable for students. We understand that in today's digital world, students often waste valuable time searching for answers across multiple platforms. ClarifAI solves this by blending the power of AI with the trust of community-driven insights, giving you the right answer at the right time.
+                        </p>
+                        <p>
+                            Our vision is to build a future where students never feel stuck or alone while learning. ClarifAI promotes collaborative education, where technology and community come together to support every learner. With a focus on clarity, trust, and accessibility, our mission is to empower students worldwide to learn smarter, grow faster, and succeed with confidence.
+                        </p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Advanced AI Technology</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Instant Responses</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure & Private</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet the Team</h2>
+                <p class="section-subtitle">The brilliant minds behind ClarifAI</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card glassmorphism">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 class="team-name">Dhruv Javiya</h3>
+                    <p class="team-role">Front-end + Backend Developer</p>
+                    <p class="team-bio">Full-stack developer passionate about creating seamless user experiences and robust backend systems.</p>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/dhruv-javiya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/DhruvJaviya16?t=x56ESr9H3x0gyZoLfq3ADA&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/dhruv161701"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card glassmorphism">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 class="team-name">Dhruvin Kapadiya</h3>
+                    <p class="team-role">Front-end + Backend Developer</p>
+                    <p class="team-bio">Expert in both frontend and backend development, focused on building scalable and efficient applications.</p>
+                    <div class="team-social">
+                        <a href="www.linkedin.com/in/dhruvin-kapadiya"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Dhruvin107"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card glassmorphism">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 class="team-name">Hetsi Javiya</h3>
+                    <p class="team-role">Navari Bajar</p>
+                    <p class="team-bio">Dedicated to creating comprehensive documentation and ensuring clear communication of our project's features and benefits.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container glassmorphism">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Message</label>
+                            <textarea id="note" name="note" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content glassmorphism">
+                <p>Made with ❤️ by ClarifAI Team</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
