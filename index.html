@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClarifAI - Your AI Assistant</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation Bar with Glassmorphism -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
+                <img id="siteLogo" alt="ClarifAI logo" style="height:40px; display:none;" />
                 <h2><span class="clarifai-text">ClarifAI</span></h2>
             </div>
             <ul class="nav-menu" id="nav-menu">
@@ -54,16 +58,12 @@
                     <span id="typewriter"></span>
                 </p>
             </div>
-            
+
             <!-- AI Chat Interface (moved out of hero-content) -->
             <div class="chat-container animate-fade-up">
                 <div class="chat-input-group">
-                    <input 
-                        type="text" 
-                        id="questionInput" 
-                        placeholder="Ask me anything about ClarifAI..."
-                        class="chat-input"
-                    >
+                    <input type="text" id="questionInput" placeholder="Ask me anything about ClarifAI..."
+                        class="chat-input">
                     <button id="askButton" class="ask-button">
                         <i class="fas fa-paper-plane"></i>
                         Ask
@@ -74,13 +74,26 @@
 
             <!-- Download APK Button (moved out of hero-content) -->
             <div class="download-section animate-fade-up">
-                <button class="download-btn">
+                <!-- Replace ClarifAI.apk with your APK filename placed in the SAME folder as index.html -->
+                <a id="downloadApk" class="download-btn" download onclick="forceDownload()">
                     <i class="fas fa-download"></i>
                     Download APK
-                </button>
+                </a>
             </div>
+            <!-- Place after your download button anchor with id="downloadApk" -->
+            <script>
+                function forceDownload() {
+                    const link = document.createElement('a');
+                    link.href = './ClarifAI.apk';  // Path to your APK
+                    link.download = 'ClarifAI'; // File name for download
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            </script>
+
         </div>
-        
+
         <!-- Background Animation Elements -->
         <div class="floating-elements">
             <div class="floating-circle circle-1"></div>
@@ -100,10 +113,17 @@
                     <div class="about-text">
                         <h3>Empowering Student Learning</h3>
                         <p>
-                            ClarifAI was created with a simple yet powerful mission – to make learning easier, faster, and more reliable for students. We understand that in today's digital world, students often waste valuable time searching for answers across multiple platforms. ClarifAI solves this by blending the power of AI with the trust of community-driven insights, giving you the right answer at the right time.
+                            ClarifAI was created with a simple yet powerful mission – to make learning easier, faster,
+                            and more reliable for students. We understand that in today's digital world, students often
+                            waste valuable time searching for answers across multiple platforms. ClarifAI solves this by
+                            blending the power of AI with the trust of community-driven insights, giving you the right
+                            answer at the right time.
                         </p>
                         <p>
-                            Our vision is to build a future where students never feel stuck or alone while learning. ClarifAI promotes collaborative education, where technology and community come together to support every learner. With a focus on clarity, trust, and accessibility, our mission is to empower students worldwide to learn smarter, grow faster, and succeed with confidence.
+                            Our vision is to build a future where students never feel stuck or alone while learning.
+                            ClarifAI promotes collaborative education, where technology and community come together to
+                            support every learner. With a focus on clarity, trust, and accessibility, our mission is to
+                            empower students worldwide to learn smarter, grow faster, and succeed with confidence.
                         </p>
                     </div>
                     <div class="about-features">
@@ -135,25 +155,34 @@
             <div class="team-grid">
                 <div class="team-card glassmorphism">
                     <div class="team-avatar">
-                        <i class="fas fa-user-circle"></i>
+                        <img id="avatar-dhruv" alt="Dhruv Javiya"
+                            style="width:80px; height:80px; border-radius:50%; object-fit:cover; display:none;" />
+
                     </div>
                     <h3 class="team-name">Dhruv Javiya</h3>
                     <p class="team-role">Front-end + Backend Developer</p>
-                    <p class="team-bio">Full-stack developer passionate about creating seamless user experiences and robust backend systems.</p>
+                    <p class="team-bio">Full-stack developer passionate about creating seamless user experiences and
+                        robust backend systems.</p>
                     <div class="team-social">
-                        <a href="https://www.linkedin.com/in/dhruv-javiya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/DhruvJaviya16?t=x56ESr9H3x0gyZoLfq3ADA&s=09"><i class="fab fa-twitter"></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/dhruv-javiya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/DhruvJaviya16?t=x56ESr9H3x0gyZoLfq3ADA&s=09"><i
+                                class="fab fa-twitter"></i></a>
                         <a href="https://github.com/dhruv161701"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
                 <div class="team-card glassmorphism">
                     <div class="team-avatar">
-                        <i class="fas fa-user-circle"></i>
+                        <img id="avatar-dhruvin" alt="Dhruvin Kapadiya"
+                            style="width:80px; height:80px; border-radius:50%; object-fit:cover; display:none;" />
+
                     </div>
                     <h3 class="team-name">Dhruvin Kapadiya</h3>
                     <p class="team-role">Front-end + Backend Developer</p>
-                    <p class="team-bio">Expert in both frontend and backend development, focused on building scalable and efficient applications.</p>
+                    <p class="team-bio">Expert in both frontend and backend development, focused on building scalable
+                        and efficient applications.</p>
                     <div class="team-social">
                         <a href="www.linkedin.com/in/dhruvin-kapadiya"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -163,11 +192,14 @@
 
                 <div class="team-card glassmorphism">
                     <div class="team-avatar">
-                        <i class="fas fa-user-circle"></i>
+                        <img id="avatar-hetsi" alt="Hetsi Javiya"
+                            style="width:80px; height:80px; border-radius:50%; object-fit:cover; display:none;" />
+
                     </div>
                     <h3 class="team-name">Hetsi Javiya</h3>
                     <p class="team-role">Navari Bajar</p>
-                    <p class="team-bio">Dedicated to creating comprehensive documentation and ensuring clear communication of our project's features and benefits.</p>
+                    <p class="team-bio">Dedicated to creating comprehensive documentation and ensuring clear
+                        communication of our project's features and benefits.</p>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -231,5 +263,119 @@
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
+    <script>
+        // Programmatically trigger download of the APK from the same folder as index.html
+        // TODO: Change APK_FILENAME to your actual file name (e.g., 'SplitSync.apk')
+        const APK_FILENAME = 'ClarifAI.apk';
+
+        function forceDownload(e) {
+            if (e) e.preventDefault();
+            const link = document.createElement('a');
+            link.href = './' + APK_FILENAME; // Path to your APK in the same folder
+            link.download = APK_FILENAME;    // Suggested file name for download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+    <script type="module">
+        // Import Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+        import { getDatabase, ref, push, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBU17ULBzEDLgFLHDv71vTamywTQ_PJmMc",
+            authDomain: "clarifai-2e14f.firebaseapp.com",
+            databaseURL: "https://clarifai-2e14f-default-rtdb.firebaseio.com",
+            projectId: "clarifai-2e14f",
+            storageBucket: "clarifai-2e14f.firebasestorage.app",
+            messagingSenderId: "733401800093",
+            appId: "1:733401800093:web:1c0b02551c4c72f947a374",
+            measurementId: "G-RWCP1HDYWZ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        try {
+            getAnalytics(app);
+        } catch (e) {
+            // Analytics may fail in non-HTTPS/local contexts; ignore
+        }
+        const db = getDatabase(app);
+
+        // Handle contact form submission
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const email = document.getElementById('email')?.value?.trim() || '';
+                const phone = document.getElementById('phone')?.value?.trim() || '';
+                const title = document.getElementById('title')?.value?.trim() || '';
+                const note = document.getElementById('note')?.value?.trim() || '';
+
+                if (!email || !title || !note) {
+                    alert('Please fill in the required fields: Email, Title, and Message.');
+                    return;
+                }
+
+                const faqsListRef = ref(db, 'User_FAQs');
+                const newFaqRef = push(faqsListRef);
+
+                try {
+                    await set(newFaqRef, {
+                        email,
+                        phone,
+                        title,
+                        note,
+                        createdAt: serverTimestamp()
+                    });
+                    alert('Your message has been sent. Thank you!');
+                    form.reset();
+                } catch (error) {
+                    console.error('Error saving to Firebase:', error);
+                    alert('Failed to send your message. Please try again.');
+                }
+            });
+        }
+
+        // Try to load local images if present (same folder as index.html)
+        const imageCandidates = {
+            siteLogo: [
+                'logo.webp', 'logo.png', 'logo.jpg', 'logo.jpeg'
+            ],
+            'avatar-dhruv': [
+                'dhruv.webp', 'dhruv.png', 'dhruv.jpg', 'dhruv.jpeg'
+            ],
+            'avatar-dhruvin': [
+                'dhruvin.webp', 'dhruvin.png', 'dhruvin.jpg', 'dhruvin.jpeg'
+            ],
+            'avatar-hetsi': [
+                'hetsi.webp', 'hetsi.png', 'hetsi.jpg', 'hetsi.jpeg'
+            ]
+        };
+
+        async function tryLoadImage(elementId, filenames) {
+            const imgEl = document.getElementById(elementId);
+            if (!imgEl) return;
+            for (const name of filenames) {
+                try {
+                    const res = await fetch(name, { method: 'HEAD' });
+                    if (res.ok) {
+                        imgEl.src = name;
+                        imgEl.style.display = 'inline-block';
+                        return;
+                    }
+                } catch (_) { /* ignore */ }
+            }
+        }
+
+        for (const [id, files] of Object.entries(imageCandidates)) {
+            tryLoadImage(id, files);
+        }
+    </script>
 </body>
+
 </html>
